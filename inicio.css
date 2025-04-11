@@ -1,0 +1,120 @@
+@font-face{
+    font-family: fuente1;
+    src: url("Philosopher-Bold.ttf");
+}
+
+body {
+    background: url("background-inicio.jpg");
+    background-size: cover;
+    font-family: fuente1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: rgba(139, 139, 138, 0.74);
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 400px;
+    max-width: 100%;
+}
+
+.login-container {
+    text-align: center;
+}
+
+h1 {
+    color: rgb(224, 189, 93);
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: rgb(56, 55, 55);
+    font-size: 14px;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgb(252, 252, 252);
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    font-size: 16px;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: rgb(151, 95, 10);
+}
+
+.login-button {
+    background-color: rgb(187, 137, 31);
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+    transition:background 0.3s ease, transform 0.5s ease;
+    margin-top: 10px;
+}
+
+.login-button:hover {
+    background-color: rgb(228, 72, 24);
+    transform: translateY(-5px);
+}
+
+.forgot-password {
+    margin-top: 15px;
+    font-size: 14px;
+    color: rgb(100, 90, 90);
+}
+
+.forgot-password a {
+    color: rgb(209, 115, 7);
+    text-decoration: none;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+
+.create-account {
+    margin-top: 15px;
+    font-size: 14px;
+    color: rgb(247, 245, 245);
+}
+
+.create-account a {
+    color: rgb(212, 106, 20);
+    text-decoration: none;
+}
+
+.create-account a:hover {
+    text-decoration: underline;
+}
+
+.error-message {
+    color: rgb(255, 0, 0);
+    margin-top: 10px;
+    font-size: 14px;
+    display: none; 
+    padding: 10px;
+    background-color: rgb(204, 175, 175);
+    border: 1px solid rgb(245, 134, 134);
+    border-radius: 5px;
+}

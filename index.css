@@ -1,0 +1,336 @@
+body {
+    background-color: rgb(0, 0, 0);
+}
+
+@font-face {
+    font-family: fuente1;
+    src: url("Philosopher-Bold.ttf");
+}
+
+a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+footer a:hover{
+    color: rgb(255, 174, 0);
+    text-decoration:underline;
+}
+
+ul{
+    list-style-type: none;
+}
+
+footer {
+    background: url("background-footer.jpg");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    padding-top: 15vh;
+    gap: 1.2rem;
+    margin-bottom: 10rem;
+    text-align: center; 
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.informacion {
+    background-color: rgba(255, 255, 255, 0.829);
+    color: rgb(0, 0, 0);
+    text-align: justify;
+    padding: 1rem;
+    margin: 0.5rem;
+    border: 0.125rem groove rgba(197, 137, 7, 0.555);
+    font-family: 'fuente1', serif;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    word-wrap: break-word; 
+}
+
+#contenedor-video {
+    min-height: 100vh;
+    width: 100vw;
+    position: relative;
+    overflow: hidden;
+}
+
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contenedor-inicio {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.993);
+    opacity: 0.7;
+}
+
+.inicio {
+    position: relative;
+    text-align: center;
+    margin-top: 25vh;
+    z-index: 2;
+    color: rgb(255, 255, 255);
+    font-size: 2.5rem;
+    overflow: hidden;
+    font-family: 'fuente1', serif;
+}
+
+.barra {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    z-index: 100;
+    background-color: rgb(133, 133, 133);
+    padding: 0.75rem;
+    opacity: 0.6;
+    border-radius: 0 0 0.5rem 0.5rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.elemento-barra {
+    color: rgb(255, 255, 255);
+    font-family: 'fuente1', serif;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    z-index: 1000;
+    border-radius: 0 0 0.5rem 0.5rem;
+    transition: transform 0.2s ease;
+}
+
+.elemento-barra:hover {
+    background: rgb(184, 184, 184);
+    color: rgb(136, 117, 7);
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .barra {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .inicio {
+        font-size: 2rem;
+    }
+
+    footer {
+        padding-top: 20%;
+    }
+}
+
+@media (max-width: 480px) {
+    .inicio {
+        font-size: 1.5rem;
+    }
+
+    .informacion {
+        font-size: 1rem;
+    }
+
+    footer {
+        padding-top: 30%;
+    }
+}
+
+.boton {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: rgb(58, 58, 58);
+    color: white;
+    font-size: 2rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.5s ease;
+    font-family: 'fuente1', serif;
+}
+
+.boton:hover {
+    transform: translateY(-0.3rem) scaleX(1.05);
+    background: linear-gradient(to left, rgb(238, 204, 10), rgb(85, 62, 3));
+}
+
+#contenedor-de-piezas {
+    background-image: url("background-piezas.jpg");
+    background-size: cover;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.elemento1,
+.elemento2,
+.elemento3,
+.elemento4,
+.elemento5,
+.elemento6 {
+    background-color: rgba(204, 202, 202, 0.897);
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    padding: 1.5rem;
+    margin: 0;
+    border:outset;
+    transition: transform 0.3s ease-in-out, box-shadow 0.2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    word-wrap: break-word; 
+}
+
+.elemento1:hover,
+.elemento2:hover,
+.elemento3:hover,
+.elemento4:hover,
+.elemento5:hover,
+.elemento6:hover {
+    background: linear-gradient(to bottom, rgba(253, 194, 126, 0.425), rgba(245, 189, 4, 0.726));
+    transform: translateY(-0.3rem);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    border-color: rgba(248, 232, 0, 0.986);
+}
+
+.nombre-elemento {
+    background-color: rgba(173, 173, 55, 0.692);
+    font-family: fuente1;
+    transition: transform 0.3s ease-in-out, background 0.5s ease-in-out;
+    padding: 0.25rem;
+    margin-bottom: -0.5rem; 
+}
+
+.elemento1:hover .nombre-elemento,
+.elemento2:hover .nombre-elemento,
+.elemento3:hover .nombre-elemento,
+.elemento4:hover .nombre-elemento,
+.elemento5:hover .nombre-elemento,
+.elemento6:hover .nombre-elemento {
+    transform: translateY(-0.15rem) scale(1.02);
+    background: linear-gradient(to right, rgba(78, 46, 3, 0.863), rgba(245, 198, 42, 0.726));
+}
+
+.item {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.75rem;
+    color: rgb(0, 0, 0);
+    word-wrap: break-word; 
+}
+
+#origen {
+    background: url("background-origen.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 3vh 0 10vh 0;
+    padding: 2rem;
+}
+
+.historia {
+    background: rgba(59, 29, 1, 0.39);
+    color: rgb(192, 192, 192);
+    font-family: 'fuente1', serif;
+    font-size: 1.2rem;
+    padding: 1.5rem;
+    text-align: justify;
+    margin: 0.5rem 0;
+    line-height: 1.7;
+    word-wrap: break-word; 
+}
+
+.text {
+    transition: transform 0.3s ease-in-out;
+    color: white;
+    word-wrap: break-word; 
+}
+
+.text:hover {
+    color: rgba(218, 133, 6, 0.808);
+    transform: translateY(-0.3rem) scale(1.01);
+}
+
+#origen-ajedrez {
+    transition: transform 0.3s ease-in-out;
+    color: white;
+    word-wrap: break-word;
+}
+
+#origen-ajedrez:hover {
+    color: rgba(218, 133, 6, 0.808);
+    transform: translateY(-0.3rem) scale(1.01);
+}
+
+@media (min-width: 768px) {
+    footer {
+        padding-top: 10%;
+    }
+
+    .barra {
+        gap: 3rem;
+    }
+
+    .elemento-barra {
+        font-size: 2rem;
+    }
+
+    .inicio {
+        font-size: 3rem;
+    }
+
+    .informacion {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .barra {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    footer {
+        padding-top: 20%;
+    }
+
+    .elemento-barra {
+        font-size: 1.2rem;
+    }
+
+    #contenedor-de-piezas {
+        grid-template-columns: 1fr;
+    }
+
+    .inicio {
+        font-size: 2rem;
+    }
+
+    .historia {
+        font-size: 1rem;
+    }
+
+    .informacion {
+        font-size: 1rem;
+    }
+}
